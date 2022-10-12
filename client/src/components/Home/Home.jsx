@@ -1,8 +1,10 @@
 import { Typography } from '@mui/material'
+import axios from "axios"
 import React from 'react'
 import router from "../../images/router.jpg"
 
 const Home = () => {
+  
   return (
     <div style={{ margin: "5rem 1rem", display: "flex", flexDirection: "row", justifyContent: "space-around" }}>
       <div >
