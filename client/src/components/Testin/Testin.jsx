@@ -2,7 +2,7 @@ import { Button } from '@mui/material'
 import axios from 'axios'
 import React, { useState } from 'react'
 
-const Test = () => {
+const Testin = () => {
     const [link, setlink] = useState("")
     const [method, setmethod] = useState("")
     const [output, setoutput] = useState({ msg: "nothing to show" })
@@ -38,4 +38,4 @@ const Test = () => {
     )
 }
 
-export default Test
+export default Testin
