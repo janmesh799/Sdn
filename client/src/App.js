@@ -8,7 +8,7 @@ import Navbar from './components/Navbar/Navbar';
 import Home from './components/Home/Home';
 import Configuration from './components/Configuration/Configuration'
 import Stats from './components/Stats/Stats'
-import Test from './components/Test/Test';
+import Testin from './components/Testin/Testin';
 
 function App() {
   return (
