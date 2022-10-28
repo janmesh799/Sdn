@@ -16,7 +16,10 @@ const Testin = () => {
 
 
         if (method === 'GET') {
-            const res = await axios.get(link);
+            const res = await axios.get(link,{
+                
+            });
+            console.log("data = ",res.data)
             setoutput(res.data);
         }
         
