@@ -6,17 +6,19 @@ import { useState } from 'react'
 import router from "../../images/router.jpg"
 
 const Home = () => {
-const [data,setdata] = useState({});
-  const fetchdata = async ()=>{
-
-    const temp = await axios.get("http://localho.st:8080/router/all/all");
+  const [data, setdata] = useState({});
+  const url = "http://localhost:8080/router/all/all";
+  const fetchdata = async () => {
+    const temp = await axios.get(url, {
+    });
     console.log(temp.data)
     setdata(temp.data);
 
   }
-  useEffect(()=>{
-    fetchdata();
-  })
+
+  useEffect(() => {
+    fetchdata()
+  }, [url])
 
   return (
     <div style={{ margin: "5rem 1rem", display: "flex", flexDirection: "row", justifyContent: "space-around" }}>
@@ -27,10 +29,9 @@ const [data,setdata] = useState({});
         <Typography variant="h5" >
           Name of Controller
         </Typography>
-        <Typography>no. of devices connected: </Typography> 
-        <Typography>
-          {data.length}
-        </Typography>
+
+        <Typography>no. of devices connected: {data.length} </Typography>
+
       </div>
     </div >
   )
