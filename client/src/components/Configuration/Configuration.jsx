@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { Typography } from '@mui/material'
 
 const Configuration = () => {
-  const [data, setdata] = useState({})
+  const [data, setdata] = useState([])
   const fetchdata = async () => {
     const res = await axios.get("http://localhost:8080/router/all/all", {})
     setdata(res.data)
@@ -19,7 +19,7 @@ const Configuration = () => {
       <Typography>Total no. of devices Connected : {data.length}</Typography>
       <Typography> Details</Typography>
       {data.map((elem) => {
-       return (<div>
+       return (<div key={elem.switch_id}>
          <Typography>Switch_id: {elem.switch_id}</Typography>
        </div>)
      })}
