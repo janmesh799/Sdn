@@ -7,7 +7,7 @@ import router from "../../images/router.jpg"
 
 const Home = () => {
   const [data, setdata] = useState({});
-  const url = "http://localhost:8080/router/all/all";
+  const url = "http://localhost:5000/router/all/all";
   const fetchdata = async () => {
     const temp = await axios.get(url, {
     });
